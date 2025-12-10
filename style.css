@@ -81,12 +81,31 @@ h1 {
     font-size:10px;
 } */
  button {
+    text-align: center;
     height: 60px;
     width: 200px;
     background-color: pink;
     border-style: solid;
     border-width: 5px;
     border-color: rgb(112, 56, 70);
+    border-radius: 50px;
+ 
  } 
+ div {
+    border: 2px solid brown;
+ }
+
+ #ulala, #mulala {
+  
+    height: 100px;
+    width: 100px;
+    background-color: rgb(62, 128, 124);
+    border: 5px dotted rgb(102, 45, 45);
+    border-radius: 50%;
+   
+ }
 
  
+
+
+
