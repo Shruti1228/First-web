@@ -134,10 +134,13 @@ h1 {
  #logo {
     color: yellow;
     font-size: 30px;
- }
+ } */
 
+ h6 {
+    height:50px;
+    weight:50px;
+    background-color: rgba(237, 179, 179, 0.98);
+    display: inline-block;
 
+ } 
  
-
-
-
