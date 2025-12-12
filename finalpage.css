@@ -24,11 +24,12 @@
 #logo {
     margin-left: 10px;
     color: #f08804;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .button {
-    background-color: #f08804;
+    background-color: #f08804
+    ;
     color: white;
 }
  
@@ -49,5 +50,5 @@
 }
 
 #contents {
-  height: 720px;
+  height: 620px;
 }
