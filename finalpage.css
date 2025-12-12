@@ -48,7 +48,31 @@
     border: 5px solid black;
     display: inline-block;
 }
+#box1 {
+  height: 100px;
+  width: 100px;
+  border: 5px solid black;
+  display: inline-block;
+}
+/* 
+body {
+    background-image: url("car.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+} */
 
+/* 
 #contents {
-  height: 620px;
+  height: 820px;
+} */
+
+#practice5 {
+  height:100px;
+  width:100px;
+  background-image: url("car.jpg");
+  background-size: cover;
+  color: white;
+  position: fixed;
+  right:0px;
+  top: 70px;
 }
