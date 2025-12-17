@@ -1,0 +1,32 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: Arial;
+    border: border-box;  /*padding, border size etc ye sab element k height or width(border) k andr hoga*/
+}
+
+.navbar {
+    height:60px;
+    background-color: #0f1111;
+    color: white;
+     display:flex;  /* sare div's ek line me aa jaynge */
+}
+.nav-logo {
+    height:50px;
+    width:100px;
+}
+
+.logo {
+    background-image: url("amazonlogo.png");
+    background-size: cover;
+    height: 50px;
+    width: 70px;
+}
+
+.white-box {
+    border: 1.5px solid transparent;
+}
+
+.white-box:hover {
+    border: 1.5px solid white;
+}
