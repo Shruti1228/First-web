@@ -9,7 +9,7 @@
     height:60px;
     background-color: #0f1111;
     color: white;
-     display:flex;  /* sare div's ek line me aa jaynge */
+      display:flex; /* sare div's ek line me aa jaynge */
 }
 .nav-logo {
     height:50px;
@@ -29,4 +29,13 @@
 
 .white-box:hover {
     border: 1.5px solid white;
+}
+
+.add-first {
+color: #cccccc;
+font-size: 0.8rem;
+}
+
+.add-sec {
+font-size: 1rem;
 }
