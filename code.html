@@ -240,10 +240,42 @@ is between 200-300px.                                        background-color: b
 Transition: transiton-property: isme bydefault "all" kr hi dena h
             transition-duration: pura transition kitne time me hona chahiye
             transition-timing-function: transition kis style me hoga(steps, linear, ease-in, ease-out)
-            transition-delay: kitne time bad transition shuru hoga
+            transition-delay: kitne time bad transition shuru  hoga  
+
+Transition shorthand: property name, duration, timing function, delay            
 <br/>
                     
+Transform (used to apply 2D & 3D transfomation to an element):translate(translate, translateX, translateY)
+                                                              rotate(rotate, rotateX, rotateY, rotateZ)
+                                                              scale(sacle, scaleX, scaleY)
+                                                              skew
+                                                              matrix
 
+<br/>
+Animation syntex:       @keyframes animationname{                          
+                        from { background-color: red; }                      
+                        to { background-color: yellow;}
+                        }
+
+                        or
+
+                        @keyframes animationname {
+                            0% { font-size: 20px;}     font size should be 20px at starting
+                            50% { font-size: 40px;}    font size changes to 40px at half animation
+                            100% { font-size: 60px;}   font size changes to 60px at the end of animation
+                        }
+
+
+Animation property: animation-name: name of the animation
+                    animation-duration: duration of the animation
+                    animation-timing-function: timing function of the animation
+                    animation-delay: delay before the animation starts
+                    animation-iteration-count: number of times the animation should run
+                    animation-direction: direction of the animation (normal, reverse, alternate, alternate-reverse)
+                    animation-fill-mode: how to apply styles before and after the animation (none, forwards, backwards, both)
+                    animation-play-state: whether the animation is running or paused (running, paused)
+animation shorthand: animation-name, duration, timimg-function, delay, iteration count6, direction                    
+<br/>
 
 
 

@@ -120,7 +120,7 @@ li {
     background-color: blue;
   }
 } */
-
+/* 
 div {
   height: 100px;
   width: 100px;
@@ -128,8 +128,8 @@ div {
   border: 2px solid black;
   transition-property:all;
   transition-duration: 6s;
-  /* transition-timing-function: steps(3); 
-  transition-delay: 2s; */
+  transition-timing-function: steps(3); 
+  transition-delay: 2s;
 }
 
 div:hover {
@@ -138,7 +138,22 @@ div:hover {
 }
 div:active {
   background-color: pink;
+} */
+
+.loader {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 15px solid gray;
+  border-top: 15px solid black;
+animation: spinAnimate 1s ease-in-out infinite normal;
 }
+
+@keyframes spinAnimate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 
 
 
