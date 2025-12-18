@@ -10,18 +10,20 @@
     background-color: #0f1111;
     color: white;
     display:flex; /* sare div's ek line me aa jaynge */
-    justify-content: space-evenly;  /* elements k bich me equal space lane k liye */
-}
+    align-items: center; /* used to center elements vertically  */
+    justify-content: space-evenly; /*elements k bich me equal space lane k liye */
+    }
+    
 .nav-logo {
-    height:50px;
-    /* width:100px; */
+    height:40px;
+    width: 70px;
 }
 
 .logo {
     background-image: url("amazonlogo.png");
     background-size: cover;
-    height: 48px;
-    width: 70px;
+    height: 100%;
+    width: 100%;
 }
 
 .white-border {
@@ -47,7 +49,9 @@ color: white;
 .add-item {
     display: flex;
     align-items: center;
-    
+}
+.add-item i {
+    font-size: 13px;
 }
 
 /* box3 design */
@@ -62,8 +66,9 @@ color: white;
 }
 
 .search-select {
-    background: color #f3f3f3;
-    width: 10px;
+    background: color #c8c5c5;
+    width: 50px;
+    height: 30px;
     text-align: center;
     border-top-left-radius: 4px;
     border-bottom-left-radius:4px;
@@ -97,12 +102,17 @@ color: white;
 }
 
 .fontsiz {
-    font-size: 0.85rem;
+    font-size: 0.70rem;
     font-weight: 700
 }
 
 /* design for box 6 */
 
 .nav-cart i {
-    font-size: 26px;
+    font-size: 28px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 7;
 }
