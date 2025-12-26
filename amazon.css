@@ -222,14 +222,34 @@ margin-right:10px;
 }
 
 .foot-panel-2 {
-    background-color:rgb(11, 55, 11);
-    color: white;
-    height: 300px;
+    background-color:#132613;
+    color: #dddddd;
+    height: 350px;
     display:flex;
     justify-content: space-evenly;
-
 }
 
-.ul a {
+.panel-2-heading {
+    font-size: 50px;
+    font-weight: 50;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+.ul li {
     display: block;
 }
+
+
+.foot-panel-3 {
+    background-color: rgb(131, 213, 131);
+    color: white;
+    height: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
