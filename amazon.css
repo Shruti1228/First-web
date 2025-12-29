@@ -2,16 +2,18 @@
     margin:0;
     padding:0;
     font-family: Arial;
-    border: border-box;  /*padding, border size etc ye sab element k height or width(border) k andr hoga*/
+    box-sizing: border-box;  /*padding, border size etc ye sab element k height or width(border) k andr hoga*/
 }
 
 .navbar {
-    height: 50px;
+    height: 60px;
     background-color: black;
     color: white;
     display:flex; /* sare div's ek line me aa jaynge */
     align-items: center; /* used to center elements vertically  */
-    justify-content: space-evenly; /*elements k bich me equal space lane k liye */
+    justify-content: space-between;; /*elements k bich me equal space lane k liye */
+    position: relative;
+    z-index: 9999;
     }
 
 /* box-1, amazon logo */
@@ -32,13 +34,24 @@
 /* for white border on hover */
 
 .white-border {
-    border: 1.5px solid transparent;
+    border: 2px solid transparent;
+    cursor: pointer; /* Your mouse cursor should change to a hand */
+    display: flex;       
+    align-items: center;  /* Centers content inside the border */
+    padding: 2px 5px;
+    margin: 1px;
 }
 
 .white-border:hover {
-    border: 1.5px solid white;
+    border: 1.5px solid white !important;
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
+.logo.white-border {
+    min-width: 100px;
+    min-height: 40px;
+}
+      
 /* box2, location */
 
 .add-first {
@@ -62,16 +75,22 @@ color: white;
 /* box3, search button */
 
 .nav-search {
-    display: flex;
-    justify-content: space-evenly;
-    background-color:pink;
-    width: 620px;
-    height: 30px;
-    border-radius: 4px; 
+  display: flex;
+    flex-grow: 1; /* This makes search expand to fill available space */
+    margin: 0 10px;
+    height: 40px; /* Slightly taller for better UX */
+    background-color: white; /* Remove the pink! */
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.nav-search:focus-within {
+    box-shadow: 0 0 0 2px #f3a847, 0 0 0 3px #232f3e; 
+    border-radius: 4px;
 }
 
 .search-select {
-    background: color #c8c5c5;
+    background-color: #c8c5c5;
     width: 50px;
     height: 30px;
     text-align: center;
@@ -97,7 +116,7 @@ color: white;
     color: black;
 }
 
-.nav-serach:hover {
+.nav-search:hover {
     border: 2px solid rgb(255, 165, 0);
 }
 
@@ -126,32 +145,50 @@ color: white;
 
 .pannel {
     height:40px;
-    background-color: rgb(11, 55, 11);
+    background-color: #232f3e;
     display:flex;
     color: white;
-    align-items: center;
-    justify-content: space-evenly;
+    /* align-items: center; */
+    padding-left: 10px;
 }
 
-.pannel-option p{
-    display: inline;
-    margin-left: 15px;
+.pannel-all {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.pannel-all i {
+    margin-right: 5px;
 }
 
 .pannel-option {
-    width: 70%;
-    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    
+}
+
+.pannel-option p{
+ margin-left: 0; /* Clear previous margin */
+    margin-right: 15px; /* Add space to the right instead */
+    font-size: 14px;
+}
+
+.pannel-option p.white-border:hover {
+    border: 1.5px solid white;
 }
 
 .pannel-deals {
+   font-weight: 700 !important; /* Bold to highlight the deal */
+    white-space: nowrap; /* Keeps text on one line */
     font-size: 0.9rem;
-    font-weight: 700;
 }
 
 /* design for main body */
 
 .slideshow-images{
-   
   width: 100%;
   height: 490px; 
   overflow: hidden;
@@ -159,9 +196,26 @@ color: white;
   margin: auto;
 }
 
+.slideshow-images::before {
+    content:"";
+    position: absolute;
+    inset: -25%;
+    background: radial-gradient(
+        ellipse at top center,
+        rgba(255, 220, 120, 0.4)
+        rgba(255, 220, 120, 0.15)
+        rgba(0, 0, 0, 0.9)
+    );
+    filter: blue(100px);
+    opacity: 0;
+    transform: scale(0.95);
+    animation: glowFade 15s infinite;
+    z-index: 0;
+} 
+
 .slideshow-strips {
   display: flex;
-  width: 500%; 
+  width: 700%; 
   animation: slide-animation 15s infinite;
 }
 
@@ -169,31 +223,45 @@ color: white;
   width: 100%;
   height: 490px;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
 }   
-
 @keyframes slide-animation {
-  0%   { transform: translateX(0); }         /* Image 1 */
-  15%  { transform: translateX(0); }        
-  
-  20%  { transform: translateX(-20%); }      /* Image 2 */
-  35%  { transform: translateX(-20%); }   
-  
-  40%  { transform: translateX(-40%); }      /* Image 3 */
-  55%  { transform: translateX(-40%); }   
-  
-  60%  { transform: translateX(-60%); }      /* Image 4 */
-  75%  { transform: translateX(-60%); }   
-  
-  80%  { transform: translateX(-80%); }      /* Image 5 */
-  95%  { transform: translateX(-80%); }  
-  
-  100% { transform: translateX(0); }         /* Back to Image 1 */
-}       
+  0%, 10%     { transform: translateX(0); }            /* Image 1 */
+  14%, 24%    { transform: translateX(-14.28%); }      /* Image 2 */
+  28%, 38%    { transform: translateX(-28.57%); }      /* Image 3 */
+  42%, 52%    { transform: translateX(-42.85%); }      /* Image 4 */
+  56%, 66%    { transform: translateX(-57.14%); }      /* Image 5 */
+  70%, 80%    { transform: translateX(-71.42%); }      /* Image 6 */
+  84%, 94%    { transform: translateX(-85.71%); }      /* Image 7 */
+  100%        { transform: translateX(0); }            /* Loop back to 1 */
+}     
+
+@keyframes glowFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    15% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    30% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 .slide-msg {
     margin-top: 50px;
     position: absolute;   /* This is the magic line */
-    top: 450px;         /* Pins it 20px from the bottom of the images */
+    top: 470px;         /* Pins it 20px from the bottom of the images */
     left: 50%;       
     transform: translateX(-50%); 
     background-color: white;
