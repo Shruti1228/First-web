@@ -287,7 +287,7 @@ color: white;
     height: 300px;     
     width: 25%;
     background-color: white;
-    padding: 20px;    
+    padding: 15px;
     z-index: 21;
 }
 
@@ -300,8 +300,8 @@ color: white;
 } 
 
 .box-content {
-margin-left: 10px;
-margin-right:10px;
+margin-left: 5px;
+margin-right:5px;
 
 }
 
