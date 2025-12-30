@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #e3e6e6; /* Amazon's standard light gray background */
+    background-color: #e3e6e6; 
 }
 
 .navbar {
@@ -39,9 +39,9 @@ body {
 
 .white-border {
     border: 2px solid transparent;
-    cursor: pointer; /* Your mouse cursor should change to a hand */
+    cursor: pointer; 
     display: flex;       
-    align-items: center;  /* Centers content inside the border */
+    align-items: center; 
     padding: 2px 5px;
     margin: 1px;
 }
@@ -80,10 +80,10 @@ color: white;
 
 .nav-search {
     display: flex;
-    flex-grow: 1; /* This makes search expand to fill available space */
+    flex-grow: 1; 
     margin: 0 10px;
-    height: 40px; /* Slightly taller for better UX */
-    background-color: white; /* Remove the pink! */
+    height: 40px; 
+    background-color: white; 
     border-radius: 4px;
     overflow: hidden;
 }
@@ -94,12 +94,20 @@ color: white;
 }
 
 .search-select {
-    background-color: #c8c5c5;
-    width: 50px;
-    height: 30px;
+    background-color: #f3f3f3; 
+    width: 50px;               
+    height: 100%;             
     text-align: center;
+    border: none;            
     border-top-left-radius: 4px;
-    border-bottom-left-radius:4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.search-select:hover {
+    background-color: #dadada;
 }
 
 .search-input {
@@ -175,8 +183,8 @@ color: white;
 }
 
 .pannel-option p{
- margin-left: 0; /* Clear previous margin */
-    margin-right: 15px; /* Add space to the right instead */
+    margin-left: 0; 
+    margin-right: 15px; 
     font-size: 14px;
 }
 
@@ -185,8 +193,8 @@ color: white;
 }
 
 .pannel-deals {
-   font-weight: 700 !important; /* Bold to highlight the deal */
-    white-space: nowrap; /* Keeps text on one line */
+   font-weight: 700 !important; 
+    white-space: nowrap; 
     font-size: 0.9rem;
 }
 
@@ -276,7 +284,7 @@ color: white;
 }
 
 .box {    
-    height: 300px;      /* Increased height to look more like Amazon */
+    height: 300px;     
     width: 25%;
     background-color: white;
     padding: 20px;    
@@ -303,7 +311,7 @@ margin-right:10px;
 
 /* design for footer */
 .foot-panel-1 {
-    background-color: rgb(23, 43, 23);
+    background-color: rgb(55, 71, 90);
     color: white;
     height: 50px;
     display:flex;
@@ -313,7 +321,7 @@ margin-right:10px;
 }
 
 .foot-panel-2 {
-    background-color:#132613;
+    background-color: #232f3e;
     color: #dddddd;
     height: 350px;
     display:flex;
@@ -335,9 +343,9 @@ ul {
 
 
 .foot-panel-3 {
-    background-color: rgb(131, 213, 131);
+    background-color: #232f3e;
     color: white;
-    height: 200px;
+    height: 50px;
     display:flex;
     justify-content: center;
     align-items: center;
