@@ -5,6 +5,10 @@
     box-sizing: border-box;  /*padding, border size etc ye sab element k height or width(border) k andr hoga*/
 }
 
+body {
+    background-color: #e3e6e6; /* Amazon's standard light gray background */
+}
+
 .navbar {
     height: 60px;
     background-color: black;
@@ -75,7 +79,7 @@ color: white;
 /* box3, search button */
 
 .nav-search {
-  display: flex;
+    display: flex;
     flex-grow: 1; /* This makes search expand to fill available space */
     margin: 0 10px;
     height: 40px; /* Slightly taller for better UX */
@@ -190,28 +194,10 @@ color: white;
 
 .slideshow-images{
   width: 100%;
-  height: 490px; 
-  overflow: hidden;
-  border: 5px solid #333;
+  height: 500px; 
+  position: relative;
   margin: auto;
 }
-
-.slideshow-images::before {
-    content:"";
-    position: absolute;
-    inset: -25%;
-    background: radial-gradient(
-        ellipse at top center,
-        rgba(255, 220, 120, 0.4)
-        rgba(255, 220, 120, 0.15)
-        rgba(0, 0, 0, 0.9)
-    );
-    filter: blue(100px);
-    opacity: 0;
-    transform: scale(0.95);
-    animation: glowFade 15s infinite;
-    z-index: 0;
-} 
 
 .slideshow-strips {
   display: flex;
@@ -221,11 +207,12 @@ color: white;
 
 .slideshow-strips img {
   width: 100%;
-  height: 490px;
+  height: 500px;
   object-fit: cover;
   position: relative;
   z-index: 1;
 }   
+
 @keyframes slide-animation {
   0%, 10%     { transform: translateX(0); }            /* Image 1 */
   14%, 24%    { transform: translateX(-14.28%); }      /* Image 2 */
@@ -235,33 +222,25 @@ color: white;
   70%, 80%    { transform: translateX(-71.42%); }      /* Image 6 */
   84%, 94%    { transform: translateX(-85.71%); }      /* Image 7 */
   100%        { transform: translateX(0); }            /* Loop back to 1 */
-}     
+}   
 
-@keyframes glowFade {
-    0% {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    15% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    30% {
-        opacity: 1;
-    }
-    45% {
-        opacity: 0;
-        transform: scale(1.05);
-    }
-    100% {
-        opacity: 0;
-    }
+
+.slideshow-images::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 350px; /* Adjust this to control how high the fade goes */
+  /* Gradient from transparent (top) to white (bottom) */
+  background: linear-gradient(to bottom, transparent, #e3e6e6); 
+  z-index: 5; /* Sits above the images */
 }
 
+
 .slide-msg {
-    margin-top: 50px;
-    position: absolute;   /* This is the magic line */
-    top: 470px;         /* Pins it 20px from the bottom of the images */
+    position: absolute;   
+    bottom: 135px;      /* Move it up so it stays above the overlapping shop-boxes */
     left: 50%;       
     transform: translateX(-50%); 
     background-color: white;
@@ -270,9 +249,9 @@ color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.80rem;
-    width: 96%;        
-    z-index: 10;        /* Ensures it stays on top of the images */
+    font-size: 0.85rem;
+    width: 97%;        
+    z-index: 30;        /* Highest z-index to stay on very top */
 }
 
 .slide-msg a {
@@ -287,17 +266,21 @@ color: white;
 
 .shop-option {
     display: flex;
-    justify-content: space-evenly;;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: transparent; /* Changed to transparent to see the fade behind it */
+    position: relative;
+    z-index: 20;        /* Higher than the image z-index */
+    margin-top: -120px; /* This pulls the boxes UP over the images */
+    padding: 0 20px;
 }
 
 .box {    
-    height:270px;
-    width: 23%;
-    background-color:white;
-    padding: 20px 0px 15px;
-    margin-top: 10px;
+    height: 300px;      /* Increased height to look more like Amazon */
+    width: 25%;
+    background-color: white;
+    padding: 20px;    
+    z-index: 21;
 }
 
  .box-1-pic {
@@ -316,7 +299,7 @@ margin-right:10px;
 
 .box-content p {
     color: #007185;
-}
+} 
 
 /* design for footer */
 .foot-panel-1 {
