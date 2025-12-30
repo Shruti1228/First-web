@@ -153,7 +153,7 @@ color: white;
 .slideshow-images{
    
   width: 100%;
-  height: 490px; 
+  height: 350px; 
   overflow: hidden;
   border: 5px solid #333;
   margin: auto;
@@ -167,7 +167,7 @@ color: white;
 
 .slideshow-strips img {
   width: 100%;
-  height: 490px;
+  height: 350px;
   object-fit: cover;
 }   
 
@@ -193,7 +193,7 @@ color: white;
 .slide-msg {
     margin-top: 50px;
     position: absolute;   /* This is the magic line */
-    top: 450px;         /* Pins it 20px from the bottom of the images */
+    top: 350px;         /* Pins it 20px from the bottom of the images */
     left: 50%;       
     transform: translateX(-50%); 
     background-color: white;
