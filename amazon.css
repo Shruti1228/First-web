@@ -304,7 +304,7 @@ cursor: pointer;
 
 .shop-option {
     display: flex;
-     flex-wrap: wrap; /* allows boxes to wrap to next line if needed */
+    flex-wrap: wrap; /* allows boxes to wrap to next line if needed */
     justify-content: space-evenly;
     align-items: center;
     background-color: transparent; /* Changed to transparent to see the fade behind it */
@@ -319,10 +319,10 @@ cursor: pointer;
 }
 
 .box {    
-    height: 300px;     
+    height: 310px;     
     width: 25%;
     background-color: white;
-    padding: 15px;
+    padding: 5px;
     z-index: 21;
 }
 
@@ -336,8 +336,11 @@ cursor: pointer;
 
 .box-content {
 margin-left: 5px;
-margin-right:5px;
+margin-right: 5px;
+}
 
+.box-content h2 {
+    margin-top: 10px;
 }
 
 .box-content p {
