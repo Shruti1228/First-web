@@ -347,6 +347,9 @@ margin-right: 5px;
     color: #007185;
 } 
 
+/* design for denim pannel */
+
+
 /* design for footer */
 
 .foot-sign-in {
@@ -401,7 +404,7 @@ margin-right: 5px;
     text-decoration: underline;
 }
 
-
+/* design for footer pannel-1, back to top */
 .foot-panel-1 {
     background-color: rgb(55, 71, 90);
     color: white;
@@ -412,6 +415,7 @@ margin-right: 5px;
     font-size: 0.85rem;
 }
 
+/* design for footer pannel-2, helpful linkes */
 .foot-panel-2 {
     background-color: #232f3e;
     color: #dddddd;
@@ -419,7 +423,12 @@ margin-right: 5px;
     display:flex;
     justify-content: space-evenly;
 }
-
+ 
+.foot-panel-2-section {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
 .panel-2-heading {
     font-size: 19px;
     font-weight: 50;
@@ -439,6 +448,7 @@ ul a:hover {
   text-decoration: underline;
 }
 
+/* design for footer pannel-3, copyright info */
 foot-panel-3 {
     background-color:pink;
     color: #dddddd;
