@@ -398,7 +398,67 @@ margin-right: 5px;
     text-decoration: underline;
 }
 
+/* design for multi picture add pannel */
+.multi-add-panel {
+    background-color: #e3e6e6; 
+    padding: 20px;
+    display: flex; /* Lines up the cards horizontally */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+/* Individual White Box */
+
+.multi-add {
+    width: 97%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #dadada;
+     margin: 10px auto;   
+    margin-bottom: 0;   margin: 10px auto;   
+    margin-bottom: 0; 
+}
+
+.multiple-add-1{
+    background-color: white;
+    width: 25%; 
+    padding: 13px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.multi-add-text h2 {
+    font-size: 1.3rem;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.pics-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.multi-add-item {
+    aspect-ratio: 1 / 1; /* Keeps images perfectly square */
+    background-color: #f3f3f3; 
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.pics-nd-text p {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    color: #0F1111;
+}
 
 /* design for footer */
 
