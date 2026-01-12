@@ -399,7 +399,7 @@ margin-right: 5px;
 }
 
 /* design for multi picture add pannel */
-.multi-add-panel {
+.multi-add-pannel {
     background-color: #e3e6e6; 
     padding: 20px;
     display: flex; /* Lines up the cards horizontally */
@@ -415,8 +415,7 @@ margin-right: 5px;
     display: flex;
     justify-content: space-evenly;
     background-color: #dadada;
-     margin: 10px auto;   
-    margin-bottom: 0;   margin: 10px auto;   
+    margin: 10px auto;      
     margin-bottom: 0; 
 }
 
